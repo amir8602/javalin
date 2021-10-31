@@ -9,6 +9,13 @@ public class Main {
         Double d2 = new Double(12.5);
         Integer i2 = d2.intValue();
 
+        Integer [] arr = new Integer[10];
+
+        arr [0] = new Integer(12);
+
+
+        Double [] arr2 = new Double[20];
+
 
     }
 }
