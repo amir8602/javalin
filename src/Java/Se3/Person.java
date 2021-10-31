@@ -1,15 +1,35 @@
 package Java.Se3;
 
+import com.sun.org.apache.xpath.internal.operations.Bool;
+
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+
 public class Person {
 
     private String name;
     private String family;
     private Integer age;
+    private Boolean goneToEsfahan;
+    ArrayList <String> movies ;
 
-    public Person(String name, String family, Integer age) {
+    public Boolean getGoneToEsfahan() {
+        return goneToEsfahan;
+    }
+
+    public void setGoneToEsfahan(Boolean goneToEsfahan) {
+        this.goneToEsfahan = goneToEsfahan;
+    }
+
+    public Person() {
+    }
+
+    public Person(String name, String family, Integer age, Boolean goneToEsfahan) {
         this.name = name;
         this.family = family;
         this.age = age;
+        this.goneToEsfahan = goneToEsfahan;
+        movies = new ArrayList<>();
     }
 
     public String getName() {
@@ -44,4 +64,27 @@ public class Person {
                 ", age=" + age +
                 '}';
     }
+
+    public Boolean haveGazSoFar() {
+        if(this.getGoneToEsfahan()){
+            System.out.println("yes");
+            return true ;
+        }else {
+            System.out.println("no");
+            return false;
+        }
+    }
+
+    public void goToCinema(String movie){
+        movies.add(movie);
+        System.out.printf("%s watch the %s movie %n", this.getName() , movie );
+    }
+
+    public void tellMeMoviesYouSeenBefore(){
+        for (String movie : movies) {
+            System.out.println(movie);
+        }
+
+    }
+
 }
