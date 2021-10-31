@@ -6,6 +6,9 @@ public class Main {
         System.out.println(str.charAt(2));
         Integer in = new Integer(25);
 
+        Double d2 = new Double(12.5);
+        Integer i2 = d2.intValue();
+
 
     }
 }
