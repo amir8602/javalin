@@ -37,4 +37,13 @@ public class Student extends Person {
         String str = String.format("name : %s  -  family : %s  -  age : %d  -  sid : %s  -  book : %s " , this.getName() , this.getFamily() , this.getAge() , this.getSid() , this.getBook());
         return str;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        Student sec = (Student)o;
+        if(this.getName().equalsIgnoreCase(sec.getName()))
+            if(this.getFamily().equalsIgnoreCase(sec.getFamily()))
+                return true;
+        return false;
+    }
 }
