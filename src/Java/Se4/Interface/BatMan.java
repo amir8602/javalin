@@ -1,6 +1,6 @@
 package Java.Se4.Interface;
 
-public class BatMan implements Hero{
+public class BatMan extends Bat implements Hero{
 
     @Override
     public void fly() {
