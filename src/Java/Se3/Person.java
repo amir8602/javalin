@@ -12,6 +12,12 @@ public class Person {
     private Integer age;
     private Boolean goneToEsfahan;
     ArrayList <String> movies ;
+    private static Integer max_age = 130;
+    private static final String  country = "IRI" ;
+
+    static {
+        max_age = 120;
+    }
 
     public Boolean getGoneToEsfahan() {
         return goneToEsfahan;
@@ -87,4 +93,19 @@ public class Person {
 
     }
 
+    public ArrayList<String> getMovies() {
+        return movies;
+    }
+
+    public void setMovies(ArrayList<String> movies) {
+        this.movies = movies;
+    }
+
+    public static Integer getMax_age() {
+        return max_age;
+    }
+
+    public static void setMax_age(Integer max_age) {
+        Person.max_age = max_age;
+    }
 }
