@@ -31,4 +31,10 @@ public class Student extends Person {
     public void talk() {
         System.out.println("Student talk");
     }
+
+    @Override
+    public String toString() {
+        String str = String.format("name : %s  -  family : %s  -  age : %d  -  sid : %s  -  book : %s " , this.getName() , this.getFamily() , this.getAge() , this.getSid() , this.getBook());
+        return str;
+    }
 }

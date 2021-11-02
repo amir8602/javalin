@@ -43,4 +43,9 @@ public class Person {
         System.out.println("Person talk");
     }
 
+    @Override
+    public String toString() {
+        String str = String.format("name : %s  -  family : %s  -  age : %d  " , this.getName() , this.getFamily() , this.getAge() );
+        return str;
+    }
 }
