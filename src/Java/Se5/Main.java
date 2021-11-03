@@ -21,5 +21,17 @@ public class Main {
             System.out.println(person);
         }
 
+        String [] arr = {"babak","majidian","fateme","taha"};
+
+        Arrays.sort(arr , new MyComperetor());
+
+        for (String s : arr) {
+            System.out.println(s);
+        }
+
+
+
+
+
     }
 }
